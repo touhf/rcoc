@@ -10,7 +10,7 @@ def read_data() -> list:
     with open('./cities.csv') as data:
         reader = csv.reader(data)
         location = random.choice(list(reader))
-        print(type(location))
+        data.close()
         return location
 
 def get_random_location() -> str:
@@ -41,11 +41,15 @@ def get_random_city_by_country(country: str) -> str:
 
     if specified country not found prints "Country not found" and returns empty string
     '''
-    reader = csv.reader(open('./cities.csv'))
+    data = open('./cities.csv')
+    reader = csv.reader(data)
     filtered = filter(lambda p: country.title() == p[1], reader)
     try:
-        return random.choice(list(filtered))[0]
+        res = random.choice(list(filtered))[0]
+        data.close()
+        return res
     except IndexError:
         print("Country not found")
+        data.close()
         return ""
 
