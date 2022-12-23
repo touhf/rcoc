@@ -1,8 +1,12 @@
-import rcoc
+import rcoc, unittest
 
-print("Random city: ", rcoc.get_random_city())
+class TestRcoc(unittest.TestCase):
 
-rand_country = rcoc.get_random_country()
-print("\nRandom country: ", rand_country)
-print("Random {0} city: {1}".format(rand_country, rcoc.get_random_city_by_country(rand_country)))
+    def test_specific_country(self):
+        '''Passing non existent country should return empty string'''
+        self.assertEqual(rcoc.get_random_city_by_country("Non existent country"), "")
+
+
+if __name__ == '__main__':
+    unittest.main()
 
