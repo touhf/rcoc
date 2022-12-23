@@ -39,7 +39,7 @@ def get_random_city_by_country(country: str) -> str:
     Reads "cities.csv" file, filters records where country equals to argument
     returns random city from specified countrty as a string
 
-    if specified country not found prints "Country not found" and returns empty string
+    if specified country not found returns empty string
     '''
     data = open('./cities.csv')
     reader = csv.reader(data)
@@ -49,7 +49,6 @@ def get_random_city_by_country(country: str) -> str:
         data.close()
         return res
     except IndexError:
-        print("Country not found")
         data.close()
         return ""
 
