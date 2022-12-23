@@ -3,6 +3,10 @@ import random
 
 data = pd.read_csv('./cities.csv')
 
+def get_random_location():
+    location = data.sample()
+    return "{0}, {1}".format(location['city'].values[0], location['country'].values[0])
+
 def get_random_city():
     return data.sample()['city'].values[0]
 
