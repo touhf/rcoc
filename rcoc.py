@@ -1,23 +1,28 @@
-import pandas as pd
-import random
+import csv, random
 
-data = pd.read_csv('./cities.csv')
+def read_data():
+    with open('./cities.csv') as data:
+        reader = csv.reader(data)
+        location = random.choice(list(reader))
+        return location
 
 def get_random_location():
-    location = data.sample()
-    return "{0}, {1}".format(location['city'].values[0], location['country'].values[0])
-
-def get_random_city():
-    return data.sample()['city'].values[0]
+    location = read_data()
+    return "{0}, {1}".format(location[0], location[1])
 
 def get_random_country():
-    return random.choice(data.country.unique())
+    location = read_data()
+    return location[1]
+
+def get_random_city():
+    location = read_data()
+    return location[0]
 
 def get_random_city_by_country(country):
-    dataframe = pd.DataFrame(data)
-    country_cities = dataframe[dataframe['country'] == country.title()]
+    reader = csv.reader(open('./cities.csv'))
+    filtered = filter(lambda p: country.title() == p[1], reader)
     try:
-        return country_cities.sample()['city'].values[0]
-    except ValueError:
+        return random.choice(list(filtered))[0]
+    except IndexError:
         print("Country not found")
 
