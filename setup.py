@@ -1,4 +1,11 @@
 from distutils.core import setup
+import pathlib
+
+here = pathlib.Path(__file__).parent.resolve()
+
+long_description = (here / "README.md").read_text(encoding="utf-8")
+
+
 setup(
   name = 'rcoc',
   packages = ['rcoc'],
@@ -8,6 +15,8 @@ setup(
   author = 'touhf',
   author_email = 'tobytubar@gmail.com',
   url = 'https://github.com/touhf/rcoc',
+  long_description=long_description,
+  long_description_content_type="text/markdown",
   download_url = 'https://github.com/touhf/rcoc/archive/refs/tags/v1.0.0.tar.gz',
   keywords = ['country', 'city', 'generator'],
   install_requires=[],
