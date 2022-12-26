@@ -1,4 +1,6 @@
-import csv, random
+import csv, random, os
+
+file_path = os.getcwd() + '/cities.csv'
 
 def read_data() -> list:
     '''Reads "cities.csv" file and returns random [city, country] entity as list
@@ -7,7 +9,7 @@ def read_data() -> list:
         2. get_random_country()
         3. get_random_city()
     '''
-    with open('./cities.csv') as data:
+    with open(file_path) as data:
         reader = csv.reader(data)
         location = random.choice(list(reader))
         data.close()
@@ -41,7 +43,7 @@ def get_random_city_by_country(country: str) -> str:
 
     if specified country not found returns empty string
     '''
-    data = open('./cities.csv')
+    data = open(file_path)
     reader = csv.reader(data)
     filtered = filter(lambda p: country.title() == p[1], reader)
     try:
