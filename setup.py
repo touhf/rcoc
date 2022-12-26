@@ -10,7 +10,6 @@ long_description = (here / "README.md").read_text(encoding="utf-8")
 setup(
   name = 'rcoc',
   packages = find_packages(),
-  package_dir = {'': 'src'},
   version = '1.0.4',
   license='MIT',
   description = 'RCOC - Random Country Or City name generator',
