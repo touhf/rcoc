@@ -9,9 +9,9 @@ long_description = (here / "README.md").read_text(encoding="utf-8")
 
 setup(
   name = 'rcoc',
-  packages = find_packages('src'),
+  packages = find_packages(),
   package_dir = {'': 'src'},
-  version = '1.0.3',
+  version = '1.0.4',
   license='MIT',
   description = 'RCOC - Random Country Or City name generator',
   author = 'touhf',
@@ -19,7 +19,7 @@ setup(
   url = 'https://github.com/touhf/rcoc',
   long_description=long_description,
   long_description_content_type="text/markdown",
-  download_url = 'https://github.com/touhf/rcoc/archive/refs/tags/1.0.3.tar.gz',
+  download_url = 'https://github.com/touhf/rcoc/archive/refs/tags/1.0.4.tar.gz',
   keywords = ['country', 'city', 'generator'],
   install_requires=[],
   classifiers=[
@@ -28,12 +28,5 @@ setup(
     'Topic :: Software Development :: Build Tools',
     'License :: OSI Approved :: MIT License',
     'Programming Language :: Python :: 3',
-    'Programming Language :: Python :: 3.4',
-    'Programming Language :: Python :: 3.5',
-    'Programming Language :: Python :: 3.6',
-    'Programming Language :: Python :: 3.7',
-    'Programming Language :: Python :: 3.8',
-    'Programming Language :: Python :: 3.9',
-    'Programming Language :: Python :: 3.10',
   ],
 )
