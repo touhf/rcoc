@@ -11,7 +11,7 @@ setup(
   name = 'rcoc',
   packages = find_packages('src'),
   package_dir = {'': 'src'},
-  version = '1.0.2',
+  version = '1.0.3',
   license='MIT',
   description = 'RCOC - Random Country Or City name generator',
   author = 'touhf',
@@ -19,7 +19,7 @@ setup(
   url = 'https://github.com/touhf/rcoc',
   long_description=long_description,
   long_description_content_type="text/markdown",
-  download_url = 'https://github.com/touhf/rcoc/archive/refs/tags/1.0.2.tar.gz',
+  download_url = 'https://github.com/touhf/rcoc/archive/refs/tags/1.0.3.tar.gz',
   keywords = ['country', 'city', 'generator'],
   install_requires=[],
   classifiers=[
