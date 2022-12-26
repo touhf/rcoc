@@ -1,5 +1,4 @@
 from distutils.core import setup
-from setuptools import find_packages
 import pathlib
 
 here = pathlib.Path(__file__).parent.resolve()
@@ -9,7 +8,7 @@ long_description = (here / "README.md").read_text(encoding="utf-8")
 
 setup(
   name = 'rcoc',
-  packages = find_packages(),
+  packages = ['rcoc'],
   version = '1.0.4',
   license='MIT',
   description = 'RCOC - Random Country Or City name generator',
