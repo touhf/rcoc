@@ -1,6 +1,7 @@
 import csv, random, os
+import r1
 
-file_path = os.getcwd() + '/cities.csv'
+file_path = r1.__file__[0:-5] + 'cities.csv'
 
 def read_data() -> list:
     '''Reads "cities.csv" file and returns random [city, country] entity as list
