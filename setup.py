@@ -9,7 +9,7 @@ long_description = (here / "README.md").read_text(encoding="utf-8")
 setup(
   name = 'rcoc',
   # packages = [''],
-  version = '1.0.8',
+  version = '1.0.9',
   license='MIT',
   description = 'RCOC - Random Country Or City name generator',
   author = 'touhf',
@@ -17,7 +17,7 @@ setup(
   url = 'https://github.com/touhf/rcoc',
   long_description=long_description,
   long_description_content_type="text/markdown",
-  download_url = 'https://github.com/touhf/rcoc/archive/refs/tags/1.0.8.tar.gz',
+  download_url = 'https://github.com/touhf/rcoc/archive/refs/tags/1.0.9.tar.gz',
   keywords = ['country', 'city', 'generator'],
   install_requires=[],
   classifiers=[

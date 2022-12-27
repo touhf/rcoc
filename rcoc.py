@@ -1,6 +1,6 @@
-import csv, random, os
+import csv, random, pkg_resources
 
-file_path = __file__[0:-7] + 'cities.csv'
+file_path = pkg_resources.resource_filename(__name__, 'data/cities.csv')
 
 def read_data() -> list:
     '''Reads "cities.csv" file and returns random [city, country] entity as list
