@@ -6,6 +6,11 @@ file_path = ''
 with resources.path('data', 'cities.csv') as df:
     file_path = df
 
+print(file_path)
+file_path = str(file_path)[:-10] + 'rcoc/data/cities.csv'
+print(file_path)
+
+
 def read_data() -> list:
     '''Reads "cities.csv" file and returns random [city, country] entity as list
     Used by:
