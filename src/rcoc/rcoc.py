@@ -2,7 +2,7 @@ import csv, random
 from importlib import resources
 
 # initializing path to csv file
-file_path = __file__ + '/rcoc/data/cities.csv'
+file_path = '{0}/rcoc/data/cities.csv'.format(__file__[:-8])
 
 def read_data() -> list:
     '''Reads "cities.csv" file and returns random [city, country] entity as list
