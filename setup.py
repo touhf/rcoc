@@ -9,7 +9,7 @@ long_description = (here / "README.md").read_text(encoding="utf-8")
 setup(
   name = 'rcoc',
   packages = ['rcoc'],
-  package_dir = {'rcoc': 'src/rcoc'},
+  package_dir = {'rcoc': 'rcoc'},
   package_data = {'rcoc': ['data/*.csv']},
   version = '1.1.5',
   license='MIT',
