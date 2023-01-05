@@ -10,7 +10,7 @@ Simple script for
 3. generating random city from of country
 4. generating random location (country and city)
 ### usage
-```
+```python
 import rcoc
 
 print("Random city: ", rcoc.get_random_city())
