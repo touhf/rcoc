@@ -1,3 +1,7 @@
+[![PyPI version](https://badge.fury.io/py/rcoc.svg)](https://badge.fury.io/py/rcoc)
+[![Downloads](https://static.pepy.tech/personalized-badge/rcoc?period=total&units=international_system&left_color=black&right_color=orange&left_text=Downloads)](https://pepy.tech/project/rcoc)
+[![GitHubIssues](https://img.shields.io/badge/issue_tracking-github-blue.svg)](https://github.com/touhf/rcoc/issues)
+
 rcoc - Random Country or City
 =======================================================================================
 Simple script for
