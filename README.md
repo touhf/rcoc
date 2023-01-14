@@ -30,3 +30,8 @@ Random Bolivia city: Reyes
 
 Random location: Annecy-le-Vieux, France
 ```
+Getting list of all countries as list:
+```python
+all_countries = rcoc.get_all_countries()
+```
+

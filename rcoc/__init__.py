@@ -56,3 +56,18 @@ def get_random_city_by_country(country: str) -> str:
         data.close()
         return ""
 
+def get_all_countries():
+    '''Returns list of all countries from CSV file as a list
+    '''
+    all_countries = []
+    with open(file_path) as data:
+        reader = csv.reader(data)
+
+        # getting all unique values
+        for country in list(reader):
+            if country[1] not in all_countries:
+                all_countries.append(country[1])
+
+        data.close()
+    return all_countries[1:]
+
