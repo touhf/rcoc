@@ -5,4 +5,3 @@ from .rcoc import (
     get_random_city_by_country,
     get_all_countries,
 )
-
